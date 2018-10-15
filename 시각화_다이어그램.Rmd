@@ -1,0 +1,48 @@
+---
+---
+
+```{r setup, include=FALSE}
+install.packages("networkD3")
+install.packages("d3Network")
+install.packages("RCurl")
+library(networkD3)
+library(d3Network)
+library(RCurl)
+
+# 간단한 다이어그램
+source = c("철수", "철수", "철수", "수철", "수철", "수철", "기수", "기수")
+target = c("영희", "민희", "수철", "수진", "철수", "희수", "영희", "수철")
+
+networkData=data.frame(source, target)
+simpleNetwork(networkData)
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+setwd("C:/Users/ktm/Documents/choi_dontouch/data/rLoveyou")
+virus1=read.csv('meros.csv')
+
+simpleNetwork(virus1)
+
+
+
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+friend=read.csv('friend.csv')
+simpleNetwork(friend)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
