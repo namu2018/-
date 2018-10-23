@@ -1,0 +1,17 @@
+install.packages("shiny")
+library(shiny)
+
+runExample()
+runExample("01_hello")
+runExample("04_mpg")
+runExample("08_html")
+runExample("11_timer")
+
+install.packages("runGithub")
+install.packages("leaflet")
+install.packages("dplyr")
+library(dplyr)
+library(leaflet)
+library(shinydashboard)
+runGitHub(repo="shiny-examples", username="rstudio",subdir="086-bus-dashboard")
+runGitHub(repo="shiny-examples", username="rstudio",subdir="016-knitr-pdf")
